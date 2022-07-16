@@ -7,7 +7,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-    res.send('Testing!');
+    res.send('https://img-9gag-fun.9cache.com/photo/aMZpZgG_460s.jpg');
 });
 
 app.listen(PORT, HOST);
