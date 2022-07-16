@@ -8,7 +8,7 @@ const HOST = '0.0.0.0';
 const app = express();
 
 app.get('/image', (req, res) => {
-    res.send('https://img-9gag-fun.9cache.com/photo/aMZpZgG_460s.jpg');
+    res.sendFile('D:\devops_photo.jpg');
 });
 
 app.listen(PORT, HOST);
