@@ -20,6 +20,6 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_SECRET}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --tag ${{secrets.DOCKER_USER}}/devops-proj-01:latest
+      run: docker build . --tag ${{secrets.DOCKER_USER}}/devops-proj-02:latest
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/devops-proj-01:latest
+      run: docker push ${{secrets.DOCKER_USER}}/devops-proj-02:latest
