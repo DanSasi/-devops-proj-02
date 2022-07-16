@@ -6,9 +6,9 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-
-app.get('/image', (req, res) => {
-    res.sendFile('D:\devops_photo.jpg');
+var filePath = 'D:\devops_photo.jpg';
+app.get('/', (req, res) => {
+    res.sendFile(filePath);
 });
 
 app.listen(PORT, HOST);
