@@ -6,7 +6,8 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', (req, res) => {
+
+app.get('/image', (req, res) => {
     res.send('https://img-9gag-fun.9cache.com/photo/aMZpZgG_460s.jpg');
 });
 
