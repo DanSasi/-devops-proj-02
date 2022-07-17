@@ -30,4 +30,4 @@ jobs:
         username: ${{ secrets.SSHUSERNAME }}
         key: ${{ secrets.SSHKEY }}
         port: 22
-        script: whoami
+        script: docker-compose -f /opt/docker-compose.yml pull && docker-compose -f /opt/docker-compose.yml up -d
