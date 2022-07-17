@@ -23,3 +23,11 @@ jobs:
       run: docker build . --tag ${{secrets.DOCKER_USER}}/devops-proj-02:latest
     - name: Docker Push
       run: docker push ${{secrets.DOCKER_USER}}/devops-proj-02:latest
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SSHUSERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: 22
+        script: whoami
